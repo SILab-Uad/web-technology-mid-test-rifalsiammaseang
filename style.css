@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@ body {
 .container {
     text-align: center;
     padding: 30px;
-    background-color: #ffffff; /* Background color for container */
+    background-color: #0033ff; /* Background color for container */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -25,3 +25,117 @@ h1 {
 }
 
 /* Add more styles here as needed */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+input[type="number"] {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0015ff;
+}
+
+#passwordOutput {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #000000; /* Header color */
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff; /* Background color for container */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.password-display {
+    margin-top: 10px;
+    width: 300px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
