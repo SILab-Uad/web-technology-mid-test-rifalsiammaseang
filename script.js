@@ -1,27 +1,34 @@
 // TODO: Implement the password generation logic based on user input
 
-const generatePassword = (length, options) => {
-    const includeUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const includeLowercase = "abcdefghijklmnopqrstuvwxyz";
-    const includeNumbers = "0123456789";
-    const includeSpecialChars = "!@#$%^&*()";
-    
-    let charSet = "";
+export const generatePassword = (length, options) => {
+    // Character sets for password generation
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const specialChars = "!@#$%^&*()";
 
-    // Build the character set based on selected options
-    if (options.includeUppercase) charSet += includeUppercase;
-    if (options.includeLowercase) charSet += includeLowercase;
-    if (options.includeNumbers) charSet += includeNumbers;
-    if (options.includeSpecialChars) charSet += includeSpecialChars;
+    // Create a variable for the character set based on selected options
+    let charpw = "";
 
-    if (charSet === "") {
-        return "Please At Least Select One Option!";
+    if (options.includeUppercase) charpw += uppercase;
+    if (options.includeLowercase) charpw += lowercase;
+    if (options.includeNumbers) charpw += numbers;
+    if (options.includeSpecialChars) charpw += specialChars;
+
+    // if (charpw === "") {
+    //     alert("Minimal pilih 1 opsi dek!");
+    //     return "";
+    // }
+
+    if (charpw === "") {
+        throw new Error("At least one character type must be selected.");
     }
 
-    let password = "";
+    // Generate the password based on the selected criteria
+    let pw = "";
     for (let i = 0; i < length; i++) {
-        password += charSet.charAt(Math.floor(Math.random() * charSet.length));
+        const randomIndex = Math.floor(Math.random() * charpw.length);
+        pw += charpw[randomIndex];
     }
-
-    return password;
+    return pw;
 };
